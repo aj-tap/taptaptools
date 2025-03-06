@@ -26,7 +26,6 @@ setup(
         "pysigma-backend-carbonblack==0.1.8",
         "pysigma-backend-cortexxdr==0.1.4",
         "pySigma-backend-kusto==0.4.3",
-        "python-dateutil==2.9.0.post0",
         "pytz==2025.1",
         "PyYAML==6.0.2",
         "requests",
