@@ -19,11 +19,11 @@ MarkupSafe==3.0.2
 mdurl==0.1.2
 ml-dtypes==0.4.1
 namex==0.0.8
-numpy==2.0.2
+numpy
 opt_einsum==3.4.0
 optree==0.14.1
 packaging==24.2
-pandas==2.2.3
+pandas
 protobuf==5.29.3
 Pygments==2.19.1
 pyparsing==3.2.1
