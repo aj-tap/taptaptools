@@ -1,27 +1,11 @@
-import sys
-import os
+from core.musashi import *
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+log_analyzer = LogAnalyzer(
+    log_path='evtx-attack-samples/Discovery', 
+    result_path='output', 
+    log_format='winevtx', 
+    sigma_rule_path=None, # if not specified will use default path
+    num_threads=None
+)
 
-from taptap.core.musashi import LogAnalyzer
-
-def main():
-    print("Starting Log Analysis...")
-
-    # Define paths for logs and output
-    log_file = 'tests/sample.evtx'
-    output_dir = 'tests/output'
-    
-    # Ensure output directory exists
-    os.makedirs(output_dir, exist_ok=True)
-
-    # Initialize and execute the log analyzer
-    log_analyzer = LogAnalyzer(log_file, output_dir, 'winevtx')
-    
-    # Run the full analysis
-    log_analyzer.execute()
-
-    print("Log Analysis Completed.")
-
-if __name__ == "__main__":
-    main()
+log_analyzer.execute()
